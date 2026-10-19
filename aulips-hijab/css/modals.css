@@ -1,0 +1,12 @@
+/* Popup login & detail produk */
+
+/* ===== 13. POPUP LOGIN / DAFTAR ===== */
+.tabs { display: flex; gap: 26px; border-bottom: 1px solid var(--line); margin-bottom: 6px; font-weight: 700 }
+.tabs button { padding: 0 0 10px; color: var(--mut); border-bottom: 2px solid transparent } .tabs .on { color: var(--ink); border-color: var(--tc) }
+.er { background: #fbeceb; color: #a33; border-radius: 12px; padding: 10px 14px; font-size: 13px; margin-top: 12px; display: none }
+
+/* ===== 14. POPUP DETAIL PRODUK ===== */
+.dg { display: grid; grid-template-columns: 1fr 1fr; gap: 28px } .dg .pic { aspect-ratio: 1/1.1 }
+.sw { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px }
+.sw button { width: 38px; height: 38px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px var(--line) } .sw .on { box-shadow: 0 0 0 2px var(--tc) }
+.sz button { padding: 9px 16px; border: 1px solid var(--line); border-radius: 12px; font-size: 14px; font-weight: 600 } .sz .on { background: var(--ink); color: #fff }

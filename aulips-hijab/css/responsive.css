@@ -1,0 +1,27 @@
+/* Responsif (HP & tablet) */
+
+/* ===== 19. RESPONSIF ===== */
+@media (max-width: 1000px) {
+  .hero { grid-template-columns: 1fr; padding: 32px 0 }
+  .grid, .fg, .fgd { grid-template-columns: repeat(2,1fr) }
+  nav { order: 5; width: 100%; margin: 0 0 12px; gap: 26px; overflow-x: auto; font-size: 15px }
+  .hd { height: auto; padding: 10px 0; flex-wrap: wrap; gap: 10px }
+  .ic { margin-left: auto }
+}
+@media (max-width: 600px) {
+  .wrap { padding: 0 16px }
+  .grid { gap: 12px }
+  .card { padding: 10px; border-radius: 22px }
+  .btn { padding: 12px 20px; font-size: 15px }
+  .b2 { margin: 12px 0 0 }
+  .dg, .fgd { grid-template-columns: 1fr }
+  .logo b { font-size: 19px }
+  .logo i { width: 38px; height: 38px; font-size: 16px }
+  .logo small { font-size: 9px }
+  .cg, .rg { grid-template-columns: 1fr!important }
+  .kh h2 { font-size: 32px }
+  .mt { font-size: 12px; margin: 14px 4px 4px }
+  .card h3 { font-size: 15px }
+  .plus { width: 40px; height: 40px }
+  .pill { padding: 10px 14px }
+}

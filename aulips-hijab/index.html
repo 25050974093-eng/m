@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aulips Hijab</title>
+<!-- Font & ikon -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- CSS (urutan penting, jangan diubah) -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/catalog.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/modals.css">
+<link rel="stylesheet" href="css/cart.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<!-- Logo (dipakai di header & footer) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="lg" viewBox="0 0 32 32">
+    <path d="M16 24c-4.2 0-6.3-2.4-6.5-5.3 3.2.7 5.8 2.4 6.5 5.3z" fill="#fff" opacity=".8"/>
+    <path d="M16 22c4 0 6-2.3 6.2-4.8-3 .6-5.5 2.2-6.2 4.8z" fill="#fff" opacity=".8"/>
+    <path d="M16 18v10" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M8.5 5c-.4 8.2 2.3 13.5 7.5 14 5.2-.5 7.9-5.8 7.5-14l-4 3.5L16 3.5 12.5 8.5z" fill="#fff"/>
+    <path d="M12.5 8.5c.3 4.2 1.8 7.5 3.5 10.5M19.5 8.5c-.3 4.2-1.8 7.5-3.5 10.5" stroke="#b0614f" stroke-width=".9" fill="none" opacity=".45" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<!-- ===== BAR PROMO ===== -->
+<div class="promo"><i class="fa-solid fa-truck-fast"></i> Gratis Ongkir Seluruh Indonesia Min. Pembelian Rp 150.000 | Kode Promo: <span>AULIPS10</span></div>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="wrap hd">
+    <a href="#" class="logo">
+      <i aria-hidden="true"><svg viewBox="0 0 32 32" width="26" height="26"><use href="#lg"/></svg></i>
+      <div><b>Aulips Hijab</b><small>PREMIUM COLLECTION</small></div>
+    </a>
+    <nav><a href="#">Beranda</a><a href="#katalog" onclick="cat('')">Kategori</a><a href="#katalog">Katalog Produk</a><a href="#ulasan">Ulasan</a><a href="#bantuan">Bantuan</a></nav>
+    <!-- Ikon: cari, notifikasi, keranjang, akun -->
+    <div class="ic">
+      <button class="ib" onclick="tg('sb')" aria-label="Cari produk"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <div class="dw">
+        <button class="ib" onclick="tg('np')" aria-label="Notifikasi"><i class="fa-regular fa-bell"></i><em id="nb" style="display:none">0</em></button>
+        <div class="dp" id="np"></div>
+      </div>
+      <button class="ib" onclick="M('cart',1)" aria-label="Keranjang"><i class="fa-solid fa-bag-shopping"></i><em id="cb">0</em></button>
+      <div class="dw">
+        <button class="ib" id="pb" onclick="prof()" aria-label="Akun"></button>
+        <div class="dp" id="pp" style="width:240px"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Kolom pencarian -->
+  <div class="sbar" id="sb">
+    <div class="wrap">
+      <label class="srch">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="q" placeholder="Cari pashmina, voal..." oninput="Q=this.value.toLowerCase();draw()" aria-label="Cari produk">
+      </label>
+    </div>
+  </div>
+</header>
+<main>
+  <!-- ===== HERO ===== -->
+  <div class="wrap hero">
+    <div>
+      <h1>Tampil Anggun &amp; Nyaman Setiap Hari bersama Aulips Hijab</h1>
+      <p>Didesain khusus wanita modern. Koleksi Pashmina Silk, Soft Voal Ultrafine, dan Hijab Instant berbahan dingin, mudah dibentuk, tegak di dahi, dan tidak menerawang.</p>
+      <a href="#katalog" class="btn b1">Lihat Katalog Produk <i class="fa-solid fa-arrow-right" style="font-size:16px;margin-left:6px"></i></a><a href="#katalog" onclick="cat('')" class="btn b2">Pilih Kategori</a>
+    </div>
+    <div class="hc"><div class="hp" id="hp"></div></div>
+  </div>
+
+  <!-- ===== FITUR UNGGULAN ===== -->
+  <div class="feat">
+    <div class="wrap fg">
+      <div class="fi"><i class="fa-regular fa-gem"></i><div><b>Bahan Premium</b><small>Lembut &amp; Adem</small></div></div>
+      <div class="fi"><i class="fa-solid fa-truck-fast"></i><div><b>Pengiriman Cepat</b><small>Pengiriman Setiap Hari</small></div></div>
+      <div class="fi"><i class="fa-solid fa-shield-heart"></i><div><b>Garansi Kualitas</b><small>100% Real Picture</small></div></div>
+      <div class="fi"><i class="fa-solid fa-headset"></i><div><b>Layanan CS Ramah</b><small>Siap Membantu 24/7</small></div></div>
+    </div>
+  </div>
+
+  <!-- ===== KATALOG PRODUK ===== -->
+  <section class="k" id="katalog">
+    <div class="wrap">
+      <div class="kh">
+        <div><span class="lab">Katalog Produk</span><h2>Pilihan Koleksi Hijab</h2></div>
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <button id="addb" class="pill" style="display:none;background:var(--tc);color:#fff" onclick="openAdm()"><i class="fa-solid fa-plus"></i> Tambah produk</button>
+          <select class="so" id="so" onchange="draw()" aria-label="Urutkan"><option value="p">Urutkan: Terpopuler / Rating</option><option value="l">Harga termurah</option><option value="h">Harga tertinggi</option></select>
+        </div>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div class="grid" id="grid"></div>
+      <p id="empty" style="display:none;text-align:center;padding:60px 0;color:var(--mut)">Belum ada hijab yang cocok. Coba kata kunci lain atau pilih Semua Hijab.</p>
+      <!-- Log algoritma (Sorting & Searching) -->
+      <details class="alg" id="alg" open>
+        <summary><i class="fa-solid fa-terminal"></i> Log Algoritma: Linear Search &amp; Bubble Sort</summary>
+        <p class="algn">Array <b>P</b> berisi struct produk. Setiap kali kamu mengetik di kolom cari, memilih kategori, atau mengganti urutan, proses di bawah ini dijalankan dan dicatat.</p>
+        <div class="alg-g">
+          <div><h4>1. Log Searching (Linear Search)</h4><pre id="algS"></pre></div>
+          <div><h4>2. Log Sorting (Bubble Sort)</h4><pre id="algO"></pre></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== ULASAN PEMBELI ===== -->
+  <section class="k" id="ulasan" style="padding-top:0">
+    <div class="wrap">
+      <div class="kh">
+        <div><span class="lab">Ulasan Pembeli</span><h2>Kata Mereka yang Sudah Pakai</h2></div>
+        <button class="pill" style="background:var(--tc);color:#fff" onclick="openRv()"><i class="fa-solid fa-pen"></i> Tulis ulasan</button>
+      </div>
+      <div class="rs" id="rs"></div>
+      <div class="rg" id="rg"></div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ / BANTUAN ===== -->
+  <section class="fq" id="bantuan">
+    <div class="in wrap">
+      <span class="lab">Pertanyaan Umum</span>
+      <h2>Bantuan &amp; FAQ</h2>
+      <div class="qa"><b><i>?</i>Apakah bahan hijab terawang?</b><p>Seluruh koleksi Aulips Hijab menggunakan serat kain pilihan berkualitas tinggi yang lembut, adem, dan tidak terawang saat digunakan.</p></div>
+      <div class="qa"><b><i>?</i>Bagaimana cara pemesanan?</b><p>Pilih hijab favorit Anda, masukkan ke keranjang, dan klik Checkout, isi data pembeli, lalu bayar lewat QRIS atau lanjutkan via WhatsApp bersama customer service kami.</p></div>
+      <div class="qa"><b><i>?</i>Apakah ada gratis ongkir?</b><p>Gratis ongkir ke seluruh Indonesia untuk pembelian minimal Rp 150.000. Masukkan kode AULIPS10 di keranjang untuk diskon 10%.</p></div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="fgd">
+      <div>
+        <div class="fl"><i aria-hidden="true"><svg viewBox="0 0 32 32" width="26" height="26"><use href="#lg"/></svg></i>Aulips Hijab</div>
+        <p>Penyedia modest fashion premium terpercaya untuk menemani setiap langkah keanggunanmu.</p>
+      </div>
+      <div>
+        <div class="fh">Hubungi Kami</div>
+        <a href="mailto:support@aulipshijab.com"><i class="fa-solid fa-envelope" style="color:#d99b8c;margin-right:10px"></i>support@aulipshijab.com</a>
+        <a href="#" onclick="wa('Halo Aulips Hijab, saya mau tanya...');return false"><i class="fa-brands fa-whatsapp" style="color:#d99b8c;margin-right:10px"></i>+62 856-0601-7891</a>
+      </div>
+    </div>
+    <div class="cp">&copy; 2026 Aulips Hijab. Seluruh hak cipta dilindungi.</div>
+  </div>
+</footer>
+
+<!-- ===== POPUP / MODAL ===== -->
+<!-- Login / daftar -->
+<div class="ov" id="auth" onclick="if(event.target==this)M('auth',0)">
+  <div class="md">
+    <button class="xx" onclick="M('auth',0)" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button><h3>Selamat datang</h3>
+    <div class="tabs"><button id="ti" onclick="tab('in')">Masuk</button><button id="tu" onclick="tab('up')">Daftar</button></div>
+    <p class="er" id="er"></p>
+    <form id="fin" onsubmit="doIn(event)">
+      <label class="l">Email<input id="li" type="email" required class="f" autocomplete="email" placeholder="nama@email.com"></label>
+      <label class="l">Kata sandi<input id="lp" type="password" required class="f" autocomplete="current-password"></label>
+      <button class="sub">Masuk</button>
+    </form>
+    <form id="fup" onsubmit="doUp(event)" style="display:none">
+      <label class="l">Nama lengkap<input id="rn" required class="f" autocomplete="name"></label>
+      <label class="l">Email<input id="ri" type="email" required class="f" autocomplete="email" placeholder="nama@email.com"></label>
+      <label class="l">Kata sandi (min. 6 karakter)<input id="rp" type="password" minlength="6" required class="f" autocomplete="new-password"></label>
+      <button class="sub">Buat akun</button>
+    </form>
+  </div>
+</div>
+<!-- Detail produk (diisi lewat JavaScript) -->
+<div class="ov" id="pd" onclick="if(event.target==this)M('pd',0)">
+  <div class="md w"><div id="pdc"></div></div>
+</div>
+<!-- Keranjang -->
+<div class="ov dr" id="cart" onclick="if(event.target==this)M('cart',0)">
+  <div class="md">
+    <button class="xx" onclick="M('cart',0)" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button><h3>Keranjang</h3>
+    <div id="cl" style="flex:1;overflow:auto"></div>
+    <div style="border-top:1px solid var(--line);padding-top:14px">
+      <input id="cv" class="f" placeholder="Kode promo (opsional)">
+      <p style="display:flex;justify-content:space-between;font-weight:700;margin-top:14px"><span>Total</span><span id="ct">Rp 0</span></p>
+      <button class="sub" id="cbtn" onclick="checkout()"><i class="fa-solid fa-lock"></i> Checkout</button>
+    </div>
+  </div>
+</div>
+<!-- Checkout -->
+<div class="ov" id="co" onclick="if(event.target==this)M('co',0)">
+  <div class="md w">
+    <button class="xx" onclick="M('co',0)" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button><h3>Checkout</h3>
+    <div class="cg">
+      <form onsubmit="pay(event)">
+        <b>Data pembeli</b>
+        <label class="l">Nama penerima<input id="bn" required class="f" autocomplete="name"></label>
+        <div class="g2"><label class="l">No. WhatsApp<input id="bp" type="tel" required pattern="[0-9+ \-]{9,16}" title="Contoh: 081234567890" class="f" autocomplete="tel" placeholder="081234567890"></label><label class="l">Email<input id="be" type="email" required class="f" autocomplete="email"></label></div>
+        <label class="l">Alamat lengkap<textarea id="ba" rows="2" required class="f" placeholder="Jalan, nomor rumah, RT/RW, kelurahan, kecamatan"></textarea></label>
+        <div class="g3"><label class="l">Kota/Kabupaten<input id="bk" required class="f"></label><label class="l">Provinsi<input id="bv" required class="f"></label><label class="l">Kode pos<input id="bz" required inputmode="numeric" pattern="[0-9]{5}" title="5 digit" class="f"></label></div>
+        <label class="l">Catatan untuk penjual (opsional)<input id="bc" class="f" placeholder="Mis. warna cadangan jika kosong"></label>
+        <label class="l">Metode pembayaran</label>
+        <div class="pm"><label><input type="radio" name="pm" value="qris" checked><span><i class="fa-solid fa-qrcode"></i> QRIS</span></label><label><input type="radio" name="pm" value="wa"><span><i class="fa-brands fa-whatsapp"></i> WhatsApp</span></label></div>
+        <button class="sub">Lanjut ke pembayaran</button>
+      </form>
+      <div id="cos"></div>
+    </div>
+  </div>
+</div>
+<!-- Tulis ulasan -->
+<div class="ov" id="rvm" onclick="if(event.target==this)M('rvm',0)">
+  <div class="md">
+    <button class="xx" onclick="M('rvm',0)" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button><h3>Tulis ulasan</h3>
+    <form onsubmit="saveR(event)">
+      <label class="l">Produk<select id="rpd" class="f"></select></label>
+      <label class="l">Penilaian</label>
+      <div class="sp" id="stp"></div>
+      <label class="l">Ulasan kamu<textarea id="rt" rows="4" required class="f" placeholder="Ceritakan bahan, warna, dan pengirimannya"></textarea></label>
+      <button class="sub">Kirim ulasan</button>
+    </form>
+  </div>
+</div>
+<!-- Admin: tambah / edit produk -->
+<div class="ov" id="adm" onclick="if(event.target==this)M('adm',0)">
+  <div class="md w">
+    <button class="xx" onclick="M('adm',0)" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button><h3 id="at">Tambah produk</h3>
+    <form onsubmit="saveP(event)">
+      <input type="hidden" id="ei">
+      <label class="l">Nama produk<input id="a1" required class="f"></label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><label class="l">Kategori<select id="a2" class="f"></select></label><label class="l">Label di foto (mis. Favorit)<input id="a3" class="f"></label></div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px"><label class="l">Harga (Rp)<input id="a4" type="number" min="0" required class="f"></label><label class="l">Harga coret<input id="a5" type="number" min="0" class="f"></label><label class="l">Stok<input id="a6" type="number" min="0" class="f"></label><label class="l">Rating<input id="a7" type="number" min="0" max="5" step="0.1" class="f" value="4.9"></label></div>
+      <label class="l">Keterangan singkat<input id="a8" class="f" placeholder="100% Premium Silk Material"></label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><label class="l">Warna (pisahkan koma)<input id="a9" class="f" placeholder="Hitam, Cream, Mocca"></label><label class="l">Ukuran (pisahkan koma)<input id="a10" class="f" placeholder="75x175, 90x185"></label></div>
+      <label class="l">Foto produk<input id="a11" type="file" accept="image/*" class="f" onchange="up(event,'img')"></label>
+      <p style="font-size:12px;color:var(--mut);margin-top:6px" id="imn"></p>
+      <button class="sub">Simpan produk</button>
+    </form>
+    <label class="l" style="margin-top:26px;border-top:1px solid var(--line);padding-top:18px">Foto beranda (kartu besar di bagian atas)<input type="file" accept="image/*" class="f" onchange="up(event,'hero')"></label>
+    <label class="l" style="margin-top:18px">Gambar QRIS toko (tampil saat pembeli memilih QRIS)<input type="file" accept="image/*" class="f" onchange="up(event,'qris')"></label>
+  </div>
+</div>
+<!-- Admin: kelola katalog -->
+<div class="ov" id="mng" onclick="if(event.target==this)M('mng',0)">
+  <div class="md w">
+    <button class="xx" onclick="M('mng',0)" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button><h3>Kelola katalog</h3>
+    <div class="mh"><button class="pill" style="background:var(--tc);color:#fff" onclick="M('mng',0);openAdm()"><i class="fa-solid fa-plus"></i> Tambah produk</button><label class="pill up"><i class="fa-regular fa-image"></i> Foto beranda<input type="file" accept="image/*" hidden onchange="up(event,'hero')"></label><label class="pill up"><i class="fa-solid fa-qrcode"></i> Gambar QRIS<input type="file" accept="image/*" hidden onchange="up(event,'qris')"></label></div>
+    <div id="mgl"></div>
+  </div>
+</div>
+<!-- Toast -->
+<div class="tt" id="tt" style="display:none"></div>
+<!-- JavaScript (urutan penting: main.js harus terakhir) -->
+<script src="js/config.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/data.js"></script>
+<script src="js/algoritma.js"></script>
+<script src="js/header.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/product-detail.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

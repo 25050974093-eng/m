@@ -1,0 +1,11 @@
+/* Admin: kelola katalog */
+
+/* ===== 18. ADMIN: KELOLA KATALOG ===== */
+.mh { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px }
+.pill.up { cursor: pointer; display: inline-block }
+.mr { display: flex; gap: 12px; align-items: center; border: 1px solid var(--line); border-radius: 18px; padding: 10px; margin-bottom: 10px; flex-wrap: wrap }
+.mr .pic { width: 64px; height: 72px; flex: none; border-radius: 12px; aspect-ratio: auto } .mr .mi { flex: 1; min-width: 150px }
+.mr .mi small { display: block; color: var(--mut) } .mr>label { font-size: 12px; font-weight: 600; width: 110px } .mr>label .f { padding: 8px 10px; margin-top: 3px }
+.ma { display: flex; gap: 8px; align-items: center; flex-wrap: wrap }
+.ma button, .ma .pill { padding: 8px 14px; border-radius: 10px; background: var(--soft); font-size: 13px; font-weight: 600; border: 0; cursor: pointer }
+.ma .x { color: #a33 }

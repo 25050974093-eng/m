@@ -1,0 +1,19 @@
+/* Keranjang, checkout & pembayaran */
+
+/* ===== 15. KERANJANG ===== */
+.ci { display: flex; gap: 12px; align-items: center; border: 1px solid var(--line); border-radius: 16px; padding: 10px; margin-bottom: 10px; font-size: 13px }
+.ci .pic { width: 58px; height: 66px; flex: none; border-radius: 12px; aspect-ratio: auto } .ci div.m { flex: 1; min-width: 0 }
+
+/* ===== 16. CHECKOUT & PEMBAYARAN ===== */
+.cg { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px }
+.g2, .g3 { display: grid; gap: 12px } .g2 { grid-template-columns: 1fr 1fr }
+.g3 { grid-template-columns: 1.2fr 1fr .8fr }
+.pm { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px } .pm label { position: relative; cursor: pointer }
+.pm input { position: absolute; opacity: 0 }
+.pm span { display: flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--line); border-radius: 14px; padding: 13px; font-weight: 600; font-size: 14px }
+.pm input:checked+span { border-color: var(--tc); background: var(--soft); color: var(--tc2) } .pm input:focus-visible+span { outline: 2px solid var(--tc) }
+.sr { display: flex; justify-content: space-between; margin-top: 8px; font-size: 14px }
+.sr.tot { font-weight: 700; font-size: 17px; border-top: 1px solid var(--line); padding-top: 10px }
+.qr { text-align: center } .qr img { width: 100%; max-width: 280px; margin: 12px auto; display: block; border-radius: 16px; border: 1px solid var(--line) }
+.qr small { display: block; color: var(--mut); margin: 6px 0 }
+.qn { background: var(--soft); border-radius: 16px; padding: 40px 18px; margin: 12px 0; color: var(--mut); font-size: 13px }

@@ -1,0 +1,27 @@
+/* Katalog produk */
+
+/* ===== 9. KATALOG PRODUK ===== */
+select.so { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; font-size: 17px }
+.chips { display: flex; gap: 12px; flex-wrap: wrap; margin: 30px 0 40px }
+.chips button { background: #fff; border: 1px solid var(--line); padding: 14px 30px; border-radius: 99px; font-size: 17px }
+.chips .on { background: var(--tc); color: #fff; border-color: var(--tc); font-weight: 600; box-shadow: 0 6px 14px rgba(176,97,79,.3) }
+.grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 30px; padding: 18px; cursor: pointer; display: flex; flex-direction: column }
+.pic { position: relative; border-radius: 22px; overflow: hidden; aspect-ratio: 1.15/1.2; background: var(--soft) }
+.tag { position: absolute; top: 14px; left: 14px; background: var(--tc); color: #fff; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 99px }
+.plus { position: absolute; right: 14px; bottom: 14px; width: 52px; height: 52px; border-radius: 50%; background: #fff; font-size: 22px; box-shadow: 0 3px 10px rgba(0,0,0,.18) }
+.mt { display: flex; justify-content: space-between; margin: 22px 8px 6px; font-size: 15px; font-weight: 600; color: var(--tc); text-transform: uppercase; letter-spacing: .04em }
+.mt s { text-decoration: none; color: var(--tc) }
+.card h3 { font-size: 18px; margin: 0 8px; font-weight: 600 } .card .d { margin: 2px 8px 0; font-size: 13px; color: var(--mut) }
+.pr { margin: 10px 8px 4px; font-weight: 700; color: var(--tc2); font-size: 18px } .pr s { font-weight: 400; color: #a99a91; font-size: 13px; margin-left: 6px }
+.ad { display: flex; gap: 8px; margin: 12px 8px 2px }
+.ad button { flex: 1; padding: 8px; border-radius: 10px; background: var(--soft); font-size: 13px; font-weight: 600 } .ad .x { color: #a33 }
+
+/* Log algoritma (Sorting & Searching) */
+.alg { margin-top: 34px; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 16px 20px }
+.alg summary { cursor: pointer; font-weight: 700; color: var(--tc2) } .alg summary i { margin-right: 8px }
+.algn { color: var(--mut); font-size: 13px; margin: 10px 0 14px }
+.alg-g { display: grid; grid-template-columns: 1fr 1fr; gap: 16px }
+.alg h4 { font-size: 14px; margin-bottom: 8px }
+.alg pre { background: var(--soft); border-radius: 12px; padding: 12px 14px; font: 12px/1.6 Consolas, Menlo, monospace; max-height: 340px; overflow: auto; white-space: pre; color: var(--ink) }
+@media (max-width: 800px) { .alg-g { grid-template-columns: 1fr } }
